@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>퍼즈 개인정보 처리방침</title>
+    <meta name="description" content="퍼즈 개인정보 처리방침입니다. 현재 버전은 계정 없이 기기 내부에서 동작하며 Screen Time 권한을 사용합니다." />
+    <style>
+    :root {
+      color-scheme: dark;
+      --background: #090d16;
+      --surface: #111827;
+      --surface-soft: #17243a;
+      --surface-muted: #1d2637;
+      --text-primary: #f8fafc;
+      --text-secondary: #b8c2d4;
+      --text-muted: #8c98ac;
+      --border: #283448;
+      --accent: #7aa7ff;
+      --accent-strong: #2f6fed;
+      --accent-soft: #17243a;
+      --warning: #f6c66a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 78% 0%, rgba(122, 167, 255, 0.13), transparent 34%),
+        var(--background);
+      color: var(--text-primary);
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
+        "Segoe UI", sans-serif;
+      line-height: 1.72;
+      word-break: keep-all;
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(100%, 860px);
+      margin: 0 auto;
+      padding: 46px 20px 72px;
+    }
+
+    article {
+      background: rgba(17, 24, 39, 0.96);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 42px 38px;
+      box-shadow: 0 18px 52px rgba(0, 0, 0, 0.28);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    nav a,
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(122, 167, 255, 0.16);
+      font-size: 14px;
+    }
+
+    header {
+      margin-bottom: 30px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      margin-bottom: 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 5vw, 42px);
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 32px 0 10px;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.34;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 18px;
+      line-height: 1.36;
+      letter-spacing: 0;
+    }
+
+    p,
+    li {
+      color: var(--text-secondary);
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .lead {
+      color: var(--text-secondary);
+      font-size: 17px;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .notice {
+      margin: 20px 0;
+      padding: 17px 18px;
+      border: 1px solid rgba(122, 167, 255, 0.18);
+      border-radius: 18px;
+      background: var(--surface-soft);
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .warning {
+      border-color: rgba(246, 198, 106, 0.26);
+      background: rgba(246, 198, 106, 0.08);
+      color: #ffe0a1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .link-card {
+      display: block;
+      min-height: 130px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface-muted);
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+      font-size: 18px;
+    }
+
+    .link-card span {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    .summary-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .summary-list li {
+      margin: 0;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(29, 38, 55, 0.78);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 24px 14px 48px;
+      }
+
+      article {
+        border-radius: 20px;
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+
+        <nav aria-label="법적 문서 내비게이션">
+          <a href="./index.html">홈</a>
+          <a href="./privacy.html">개인정보 처리방침</a>
+          <a href="./support.html">고객지원</a>
+          <a href="./terms.html">이용약관</a>
+          <a href="./legal.html">법적 고지</a>
+        </nav>
+
+        <header>
+          <span class="badge">Privacy Policy</span>
+          <h1>퍼즈 개인정보 처리방침</h1>
+          <p class="lead">수집 정보, 저장 위치, 권한 사용 목적을 안내합니다.</p>
+          <p class="meta">시행일: 2026년 9월 3일</p>
+        </header>
+
+        <p class="notice">
+          퍼즈는 사용자가 직접 고른 앱 앞에 잠깐의 시간을 만들어주는 앱입니다.
+          현재 버전은 계정, 광고, 분석 SDK, 외부 서버 전송 없이 기기 안에서 동작하도록 설계되어 있습니다.
+        </p>
+
+        <section>
+          <h2>1. 개인정보 처리 원칙</h2>
+          <p>
+            퍼즈는 현재 버전에서 이름, 이메일, 전화번호, 연락처, 위치, 사진, 결제 정보 같은
+            개인정보를 직접 수집하지 않습니다. 회원가입과 로그인도 제공하지 않습니다.
+          </p>
+          <p>
+            앱 기능을 위해 필요한 설정값은 사용자의 기기 내부 저장소에 저장됩니다.
+            외부 서버로 전송하거나 광고, 분석, 트래킹 목적으로 사용하지 않습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. 기기 안에 저장될 수 있는 정보</h2>
+          <p>앱은 기능 제공을 위해 다음 정보를 기기 안에 저장할 수 있습니다.</p>
+          <ul>
+            <li>온보딩 완료 여부</li>
+            <li>사용자가 선택한 앱, 카테고리, 웹 도메인에 대한 Apple Screen Time 토큰</li>
+            <li>퍼즈 켜짐 여부, 퍼즈 시작 시각, 종료 예정 시각</li>
+            <li>사용자가 설정한 퍼즈 시간</li>
+            <li>퍼즈 종료 알림 설정 여부</li>
+            <li>DeviceActivity 예약 상태, 마지막 동작 시각, 오류 메시지 등 진단에 필요한 로컬 상태</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. 스크린 타임 권한 사용</h2>
+          <p>
+            퍼즈는 사용자가 직접 선택한 앱, 카테고리, 웹 도메인 앞에 퍼즈 화면을 보여주기 위해
+            Apple Screen Time API의 FamilyControls, ManagedSettings, DeviceActivity 기능을 사용합니다.
+          </p>
+          <p>
+            이 권한은 사용자가 직접 고른 항목에 잠깐의 시간을 두기 위한 목적으로만 사용됩니다.
+            권한을 허용하지 않으면 앱 선택과 퍼즈 적용 기능을 사용할 수 없습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. 선택한 앱 정보와 앱 사용 기록</h2>
+          <p>
+            사용자가 고른 앱, 카테고리, 웹 도메인은 Apple이 제공하는 불투명한 토큰 형태로 저장됩니다.
+            퍼즈는 선택 항목을 앱 이름 문자열로 저장하지 않으며, 사용자의 앱 사용 기록,
+            브라우징 내용, 메시지 내용, 알림 내용에 접근하지 않습니다.
+          </p>
+          <p>
+            앱 화면에서는 iOS가 제공하는 표시 정보를 통해 사용자가 선택한 대상을 확인할 수 있습니다.
+            이 정보는 외부 서버로 전송되지 않습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. 저장 위치와 보관 기간</h2>
+          <p>
+            퍼즈 상태와 선택값은 기기 내부의 App Group 저장소와 앱 내부 저장소에 보관됩니다.
+            사용자가 선택 대상을 삭제하거나 앱을 삭제하면 관련 데이터도 iOS 정책에 따라 삭제됩니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. 알림 처리</h2>
+          <p>
+            사용자가 알림 권한을 허용한 경우, 퍼즈는 퍼즈 시간이 끝났을 때 알려주기 위한
+            로컬 알림을 예약할 수 있습니다. 현재 버전은 원격 푸시 서버를 사용하지 않습니다.
+          </p>
+          <p>
+            알림은 iOS 알림 설정, 집중 모드, 기기 상태에 따라 표시되지 않거나 지연될 수 있습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. 외부 전송, 제3자 제공, 광고 및 트래킹</h2>
+          <p>
+            현재 버전의 퍼즈는 Screen Time 데이터, 선택 앱 정보, 앱 사용 데이터,
+            브라우징 데이터를 외부 서버로 전송하지 않습니다.
+            또한 광고 SDK, 제3자 분석 SDK, 트래킹 SDK를 사용하지 않습니다.
+          </p>
+          <p>
+            사용자의 데이터를 판매, 공유하거나 광고 프로파일링 목적으로 사용하지 않습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. 사용자의 선택권</h2>
+          <p>
+            사용자는 앱 안에서 선택한 대상을 개별 삭제하거나 전체 삭제할 수 있습니다.
+            스크린 타임 권한과 알림 권한은 iOS 설정에서 언제든 변경할 수 있습니다.
+            앱을 삭제하면 기기 내부에 저장된 퍼즈 관련 데이터도 삭제됩니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. 아동 개인정보</h2>
+          <p>
+            퍼즈는 만 14세 미만 아동을 주 대상으로 하지 않으며,
+            법정대리인의 동의 없이 아동의 개인정보를 수집하지 않습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. 변경 사항</h2>
+          <p>
+            개인정보 처리방침이 변경되는 경우 앱 또는 본 페이지를 통해 안내할 수 있습니다.
+            Supabase, OpenAI API, 광고, 분석 SDK, 계정 기능 등 외부 전송이 포함되는 기능이 추가되면
+            본 방침을 업데이트합니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. 문의</h2>
+          <p>
+            개인정보 관련 문의는
+            <a href="mailto:unifact.app@gmail.com">unifact.app@gmail.com</a>으로 요청할 수 있습니다.
+          </p>
+        </section>
+
+        <footer>
+          © 2026 퍼즈. 문의:
+          <a href="mailto:unifact.app@gmail.com">unifact.app@gmail.com</a>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
